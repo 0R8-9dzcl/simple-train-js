@@ -1,4 +1,12 @@
 const deepEqual = (expected, result) => {
+  if (expected === null) {
+    return result === null;
+  }
+
+  if (result === null) {
+    return false;
+  }
+  
   if (typeof expected === 'number') {
     return typeof result === 'number' && expected === result;
   }
