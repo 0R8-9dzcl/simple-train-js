@@ -1,0 +1,36 @@
+const runTests = require('../../testFunction');
+const solution = require('./solution'); // Импортируем функцию из solution.js
+
+const tests = [
+  { expected: 'Today, I am feeling confused.', args: ['confused'] },
+  { expected: 'Today, I am feeling excited.', args: ['excited'] },
+  { expected: 'Today, I am feeling good.', args: ['good'] },
+  { expected: 'Today, I am feeling sad.', args: ['sad'] },
+  { expected: 'Today, I am feeling happy.', args: ['happy'] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling confused.', args: ['confused'] },
+  { expected: 'Today, I am feeling happy.', args: ['happy'] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling excited.', args: ['excited'] },
+  { expected: 'Today, I am feeling happy.', args: ['happy'] },
+  { expected: 'Today, I am feeling confused.', args: ['confused'] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling confused.', args: ['confused'] },
+  { expected: 'Today, I am feeling sad.', args: ['sad'] },
+  { expected: 'Today, I am feeling confused.', args: ['confused'] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling sad.', args: ['sad'] },
+  { expected: 'Today, I am feeling sad.', args: ['sad'] },
+  { expected: 'Today, I am feeling good.', args: ['good'] },
+  { expected: 'Today, I am feeling sad.', args: ['sad'] },
+  { expected: 'Today, I am feeling neutral.', args: [''] },
+  { expected: 'Today, I am feeling happy.', args: ['happy'] },
+  { expected: 'Today, I am feeling good.', args: ['good'] },
+  { expected: 'Today, I am feeling happy.', args: ['happy'] },
+];
+runTests(tests, solution);
