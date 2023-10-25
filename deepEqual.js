@@ -10,8 +10,8 @@ const deepEqual = (expected, result) => {
     }
 
     return !expectedArray.some((expectedValue, index) => {
-			return !deepEqual(expectedValue, resultArray[index]);
-		});
+      return !deepEqual(expectedValue, resultArray[index]);
+    });
   };
 
   const compareObjects = (expectedObj, resultObj) => {
@@ -22,9 +22,17 @@ const deepEqual = (expected, result) => {
       return false;
     }
 
-    return !expectedKeys.some((key) => {
-			return !deepEqual(expectedObj[key], resultObj[key]);
-		});
+    for (let i = 0; i < expectedKeys.length; i++) {
+      if (expectedKeys[i] !== resultKeys[i]) {
+        return false;
+      }
+
+      if (!deepEqual(expectedObj[expectedKeys[i]], resultObj[resultKeys[i]])) {
+        return false;
+      }
+    }
+
+    return true;
   };
 
   if (isNull(expected)) {
