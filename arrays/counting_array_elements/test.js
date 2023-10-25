@@ -2,7 +2,7 @@ const runTests = require('../../testFunction');
 const solution = require('./solution'); // Импортируем функцию из solution.js
 
 const tests = [
-  { expected: { spam: 4, bacon: 1, egg: 1 }, args: [['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam']] },
+  { expected: { Spam: 4, bacon: 1, egg: 1 }, args: [['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam']] },
   { expected: { cat: 1, dog: 1, fish: 2 }, args: [['cat', 'dog', 'fish', 'fish']] },
   { expected: { process: 1, canvas: 1, cough: 1, side: 2 }, args: [['process', 'canvas', 'cough', 'side', 'side']] },
   { expected: { mark: 1, operation: 1, side: 1, growth: 1 }, args: [['operation', 'side', 'mark', 'growth']] },
