@@ -59,7 +59,6 @@ const runTests = (tests, solution) => {
   const red = (text) => `\x1b[31m${text}\x1b[0m`;
 
   for (const test of tests) {
-    const args = Array.isArray(test.args) ? test.args.join(', ') : String(test.args);
     const result = solution(...test.args);
     const pass = deepEqual( test.expected, result); // Сравниваем объекты по ключам и значениям
 
