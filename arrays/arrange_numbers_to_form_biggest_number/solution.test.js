@@ -1,4 +1,4 @@
-const runTests = require('../../testFunction');
+const runTests = require('../../testService');
 const solution = require('./solution'); // Импортируем функцию из solution.js
 
 const tests = [
@@ -32,6 +32,7 @@ const tests = [
   { expected: '40395191', args: [[395, 191, 40]] },
   { expected: '362', args: [[362]] },
   { expected: '89824', args: [[4, 89, 82]] },
+  { expected: '4039519181', args: [[395, 181, 40, 19]] },
 ];
 
 runTests(tests, solution);

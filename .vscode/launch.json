@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run solution.test.js",
+      "program": "${workspaceFolder}/${relativeFileDirname}/solution.test.js",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node",
+      "outFiles": [],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "sourceMaps": true
+    }
+  ]
+}
